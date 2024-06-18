@@ -1,5 +1,5 @@
 let passwordBox = document.querySelector("#passwordBox");
-let length = 8;
+let length = 10;
 const upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM";
 const lowerCase ="qwertyuiopasdfghjklzxcvbnm";
 const number = "1234567890";
@@ -16,7 +16,7 @@ passwordGenerated += lowerCase[Math.floor(Math.random()*lowerCase.length)];
 passwordGenerated += number[Math.floor(Math.random()*number.length)];
 passwordGenerated += symbols[Math.floor(Math.random()*symbols.length)];
 
-while(passwordGenerated.length<8)
+while(passwordGenerated.length<length)
     {
         passwordGenerated += all[Math.floor(Math.random()*all.length)];
     }
