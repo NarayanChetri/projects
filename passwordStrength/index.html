@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>password-strength-checker</title>
+    <title>Password Strength Checker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="box">
-        <h1>Enter your password :</h1>
-        <input type="text" id="pass">
+        <div class="txt">
+            <h1>Password <br> <p>Strength Checker</p></h1>
+        </div> <br><br><br><br><br><br><br><br>
+
+        <h3>Enter your password :</h3>
+        <div class="input">
+            <input type="password" id="pass"> 
+            <img src="/passwordStrength/hide.png" id="img" onclick="changeImg()">
+        </div>
+        <div class="requirements">
+            <ul>
+                <li id="req-lower"> <span id="check-lower">✗</span> At least one lowercase letter</li><br>
+                <li id="req-upper"> <span id="check-upper">✗</span> At least one uppercase letter</li><br>
+                <li id="req-length"> <span id="check-length">✗</span> Length greater than 8</li><br>
+                <li id="req-special"> <span id="check-special">✗</span> At least one special character</li>
+            </ul>
+        </div>
+        <div class="meter">
+            <div id="slider-bar"></div>
+        </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
     <script src="script.js"></script>
 </body>
 </html>

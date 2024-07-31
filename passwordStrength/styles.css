@@ -1,45 +1,117 @@
-*
-{
+* {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-
-body
-{
+body {
     min-height: 100vh;
     width: 100vw;
-background: #F9D689;
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.box
-{
-  padding-left: auto;
-  padding-right: auto;
-    background: #E0A75E;
-    text-align: center;
+    background: #F9D689;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    position: relative;
+    background: #E0A75E;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    height:50vh;
-    width:50vw;
+    height: 500px; /* Increased to accommodate requirements */
+    width: 500px;
     border-radius: 20px;
+}
+
+.box .txt {
+    left: 10px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    font-size: 20px;
+    
+}
+
+.box .input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 15%;
+    justify-content: space-around;
+    color: rgb(81, 92, 95);
+    font-size: 20px;
+}
+
+.box .input input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid rgba(241, 0, 0, 0.575);
+    background: transparent;
+    font-size: 20px;
+}
+
+.txt p {
+    color: red;
+}
+
+.box .input img {
+    height: 30px;
+    position: absolute;
+    right: 50px;
+    cursor: pointer;
+    top: 15px;
+}
+
+.box h3 {
+    padding: 20px;
+    font-size: 22px;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.requirements {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.requirements ul {
+    list-style-type: none;
+}
+
+.requirements li {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.658);
+}
+
+.requirements .valid {
+    color: green;
+}
+
+.requirements .invalid {
+    color: red;
+}
+
+.meter {
+    position: relative;
+    bottom: 210px;
+    width: 83%;
+    height: 5px;
+    position: relative;
+    margin-top: 20px;
+    visibility: hidden; /* Initially hidden */
 
 }
-.box input
-{
-    width: 70%;
-    background: none;
-    outline: none;
-    border: 2px solid white;
-    height: 35px;
-    border-radius: 20px;
-    text-align: center;
-    font-size: 22px;
-    color: red;
-    
+
+#slider-bar {
+    height: 100%;
+    width: 0;
+    background: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
 }
