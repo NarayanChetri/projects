@@ -12,7 +12,7 @@ let wicket = document.querySelector("#wicket");
 let wide = document.querySelector("#wide");
 let no_ball = document.querySelector("#no_ball");
 let ball = document.querySelector("#ball");
-let detail = document.querySelector(".detail");
+let reset = document.querySelector("#reset");
 
 let r = 0;
 let w = 0;
@@ -134,7 +134,7 @@ dot.addEventListener("click", () => {
         o += 1;
         ball.innerText = 0;
         b = 0;
-        overs.innerText = o;
+        overs.innerText = o; 
     }
     saveData();
 });
@@ -169,3 +169,20 @@ wicket.addEventListener("click", () => {
     }
     saveData();
 });
+
+reset.addEventListener("click",()=> {
+
+
+localStorage.clear();
+runs.innerText=0;
+overs.innerText=0;
+ball.innerText=0;
+wickets.innerText=0;
+ r = 0;
+ w = 0;
+ b = 0;
+ o = 0;
+
+
+
+})
