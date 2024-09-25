@@ -240,3 +240,17 @@ fetchProgrammingJoke();
       });
   });
   
+  // Function to change text when width is smaller than 500px
+function checkWidth() {
+  if (window.matchMedia("(max-width: 500px)").matches) {
+      document.querySelector("h1").textContent = "Bhai itna close toh wo bhi nahi aati thi 😑";
+  } else {
+      document.querySelector("h1").textContent = "The Developer Theme";
+  }
+}
+
+// Call the function initially
+checkWidth();
+
+// Add event listener to detect window resize and apply changes
+window.addEventListener("resize", checkWidth);
