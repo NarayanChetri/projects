@@ -17,10 +17,7 @@ Easily control your PC using commands sent through a Telegram bot. This project 
 ## Installation 🔄
 Follow these steps to set up and run the bot.
 
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd <repository-folder>
+### 1.Download the Telegram_Bot_Script and open in notepad to replace chat ID and Telegram_Bot_Token.
 ```
 
 ### 2. Install Python
